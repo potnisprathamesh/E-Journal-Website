@@ -1,0 +1,102 @@
+﻿#dimension{
+width:140px;
+height:100px;
+}
+
+* {
+color: #CC0000;
+}
+
+body {
+text-align:center;
+width:auto;
+height:auto;
+}
+
+#page_heading {
+            color: #0006fc;
+            font-size:x-large;
+            font-weight:bold;
+            text-align: left;
+            width: 270px;
+ }
+
+#background_image{
+background:url("../images/Journal.jpg");
+background-repeat:no-repeat;
+background-size:cover;
+
+}
+#logo {
+background-repeat:no-repeat;
+width:140px;
+height:100px;
+}
+
+li {
+color:#CC0000;
+text-align: left;
+margin-left: 21px
+}
+
+hr {
+width:500px;
+text-align:left;
+color:#000000;
+stroke-width:600px;
+height: 5px;
+}
+
+table {
+table-layout:fixed;
+text-align:left;
+width:800px
+}
+
+#UserProfileTable {
+width:200px;
+}
+
+#SignUpLabel {
+text-align:justify;
+width:200px;
+}
+
+#NewUserFirstName, #UserEmail, #Username,#NewUserLastName, #NewUserEmail, #NewUserName, #NewUserPassword, #NewUserPassword2, #NewUserSecAnswer, #UserSecAnswer {
+            width: 180px;
+        }
+#NewUserSecQuestion, #UserSecQuestion {
+            width: 280px;
+        }
+
+#SubmitButton {
+            width: 70px;
+        }
+
+#container {
+  padding-left: 200px;   
+  padding-right: 200px;  
+  text-align:left;
+}
+#container .column {
+  position: relative;
+  float: left;
+}
+#center {
+  padding: 0 20px 0 20px;
+  width: 100%;
+}
+#left {
+  width: 150px;          
+  padding: 0 0 0 50px;   
+  right: 240px;          
+  margin-left: -100%;
+}
+#right {
+  width: 150px;          
+  padding: 0 20px 0 20px;
+  margin-right: -100%;  
+}
+#footer {
+  clear: both;
+}

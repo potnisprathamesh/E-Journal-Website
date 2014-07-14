@@ -1,0 +1,82 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="~/Master/MasterPage.master.cs" Inherits="MasterPage" %>
+
+<%-- Master page for web pages after successful login --%>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Personal Journal</title>
+        <link rel="stylesheet" type="text/css" href="../Stylesheet/StyleSheet1.css"/>       
+    <style type="text/css">
+          #logo {
+                width:140px;
+                height:100px;
+                top: 0px;
+                left: 0px;
+            position: absolute;
+        }
+        .auto-style4 {
+            text-align: right;
+            top: 0px;
+            left: 76px;
+            position: absolute;
+            float: right;
+            height: 19px;
+            width: 34px;
+        }
+        </style>
+    
+        
+</head>
+<body id="background_image">
+    <form id="form1" runat="server">
+        <div id="header">
+        <img id="logo" src="../images/5136-Holly-Quill-BookBox2721.jpg" class="logo" style="z-index: 1; margin-right: 0px;" /> 
+        
+         <div style="left: 200px; width: 628px; position: absolute; top: 0px; height: 50px; color: #CCCC00">
+            
+                
+<%-- Menu layout for a logged-in user --%>                           
+             <asp:Menu ID="Menu1" runat="server" Height="32px" Orientation="Horizontal" ForeColor="#990000" RenderingMode="Table" StaticMenuItemStyle-HorizontalPadding="20" style="top: 15px; left: 0px; position: absolute; color:#CCCC00" Width="296px" Font-Size="Large" Font-Bold="true">
+                 <Items>
+                     <asp:MenuItem NavigateUrl="~/Pages/Home.aspx" Text="Home" Value="Home"></asp:MenuItem>
+                     <asp:MenuItem NavigateUrl="~/Pages/Post.aspx" Text="Post" Value="Post"></asp:MenuItem>
+                     <asp:MenuItem Text="Expense" Value="Expense" NavigateUrl="~/Pages/Expense.aspx"></asp:MenuItem>
+                     <asp:MenuItem NavigateUrl="~/Pages/Reminder.aspx" Text="Reminder" Value="Reminder"></asp:MenuItem>
+                     <asp:MenuItem Text="Settings" Value="Settings" NavigateUrl="~/Pages/UserProfile.aspx"></asp:MenuItem>
+                 </Items>
+             </asp:Menu>
+            
+                
+                           
+          </div>
+        
+        <div style="left: 140px; width: 1100px; position: absolute; top: 0px; height: 15px;">
+        
+        
+            
+            
+            <asp:Label ID="Label1" runat="server" Text="Label" ForeColor="#990000" style =" left: 876px; width: 163px; position: absolute; top: 18px; height: 14px; margin-right: 0px; " Font-Size="Large" Font-Bold="true"></asp:Label>
+            <asp:LoginStatus ID="LoginStatus1" runat="server" OnLoggingOut="LoginStatus1_LoggingOut" CssClass="auto-style4" style="left: 1060px; width: 40px; position: absolute; top: 16px; height: 15px; margin-right: 0px;" Font-Size="Large" Font-Bold="true" LogoutPageUrl="~/Pages/Login.aspx" LoginText="Logout" LogoutAction="Redirect"  ForeColor="#990000" LogoutText="Login" />
+    </div>
+        </div>
+        <asp:Image ID="Image1" runat="server" ImageUrl="../images/Quill.jpg" style="top: 155px; left: 0px; position: absolute; float: left; height: 690px; width: 144px; margin-right: 0px" />
+        <div id="content" style="left: 150px;top:0px;height:900px; width:1100px;">
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server" OnLoad="Page_Load">
+                
+        </asp:ContentPlaceHolder>
+            
+           
+        </div>
+        <div id="footer">
+       <!-- <asp:Label ID="copyright" runat="server" Text="Copyright © personaljournal.com"></asp:Label>
+        &nbsp;
+         <p><span style="text-align:right"></span>
+             <a href="FeedBack.aspx" >FeedBack</a>
+         </p>                                 -->
+            <pre style="color:#CC0000; font-weight: bold;"> Copyright © personaljournal.com                                                                                                   <a href="FeedBack.aspx"  style="color:#CC0000; font-weight: bold;">FeedBack</a></pre>
+        </div>
+    </form>
+</body>
+</html>
